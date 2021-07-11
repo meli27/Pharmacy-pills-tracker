@@ -7,3 +7,9 @@
 
 // Configuration settings file format documentation can be found at:
 // https://help.apple.com/xcode/#/dev745c5c974
+
+loginURL = https:/$()/admin.tofarma.com
+client = 1
+secret = WTz0Z7oBCRjSQXjHpKVVcEXAwUHdbAZJvHRRpATg
+grantType = password
+scope = *

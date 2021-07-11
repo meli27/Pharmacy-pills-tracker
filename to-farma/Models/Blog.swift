@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+struct Post: Codable {
+    let id: Int
+    let title: String
+    let banner: String?
+    let date: String
+    let text: String
+    let created_at: String
+    let updated_at: String
+}

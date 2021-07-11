@@ -1,0 +1,1103 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		012C3BFD609208B092889BA3 /* Pods_to_farma_to_farmaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 443682FA8C7F06D82D9C71DF /* Pods_to_farma_to_farmaUITests.framework */; };
+		AE55ADBC54E2B1FC8CEC986C /* Pods_to_farma.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 147B750480ABD6FCC47F2D99 /* Pods_to_farma.framework */; };
+		C20B6A99265850E200F93216 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20B6A98265850E200F93216 /* AppDelegate.swift */; };
+		C20B6AA2265850E300F93216 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C20B6AA1265850E300F93216 /* Assets.xcassets */; };
+		C20B6AB0265850E300F93216 /* to_farmaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20B6AAF265850E300F93216 /* to_farmaTests.swift */; };
+		C20B6ABB265850E300F93216 /* to_farmaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20B6ABA265850E300F93216 /* to_farmaUITests.swift */; };
+		C20B6ACD2658519200F93216 /* ToFarmaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20B6ACC2658519200F93216 /* ToFarmaAPI.swift */; };
+		C2105760268FE72F007FDD74 /* MedicineModalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C210575F268FE72F007FDD74 /* MedicineModalController.swift */; };
+		C2105762268FE73A007FDD74 /* MedicineModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2105761268FE73A007FDD74 /* MedicineModalView.swift */; };
+		C2115217269A5B8B0059E6BE /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2115216269A5B8B0059E6BE /* ChatView.swift */; };
+		C2115219269A5B980059E6BE /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2115218269A5B980059E6BE /* ChatViewController.swift */; };
+		C211521B269A5C1D0059E6BE /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C211521A269A5C1D0059E6BE /* ChatViewModel.swift */; };
+		C211521D269A5E5A0059E6BE /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C211521C269A5E5A0059E6BE /* ChatCell.swift */; };
+		C211521F269A60560059E6BE /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = C211521E269A60560059E6BE /* Message.swift */; };
+		C2144707266889580088B4F9 /* RectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2144706266889580088B4F9 /* RectangleView.swift */; };
+		C21CD5632685482300B754B9 /* MenuTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21CD5622685482300B754B9 /* MenuTabView.swift */; };
+		C21CD56526854F5500B754B9 /* RegularUserNavigationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21CD56426854F5500B754B9 /* RegularUserNavigationViewModel.swift */; };
+		C21CD567268550C900B754B9 /* RegularUserPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21CD566268550C900B754B9 /* RegularUserPageViewController.swift */; };
+		C21CD5692685549300B754B9 /* RegularUserNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21CD5682685549300B754B9 /* RegularUserNavigationViewController.swift */; };
+		C21FB9DE26818BC900A17CA8 /* ImageUnderline.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21FB9DD26818BC900A17CA8 /* ImageUnderline.swift */; };
+		C22AA607267068B5001B5FA0 /* LogSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22AA606267068B5001B5FA0 /* LogSessionView.swift */; };
+		C22AA609267068CB001B5FA0 /* LogSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22AA608267068CB001B5FA0 /* LogSessionViewController.swift */; };
+		C22AA60B26706921001B5FA0 /* LogSessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22AA60A26706921001B5FA0 /* LogSessionModel.swift */; };
+		C22AA60D267071EF001B5FA0 /* UIViewController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22AA60C267071EF001B5FA0 /* UIViewController+Navigation.swift */; };
+		C22AA60F26707ED9001B5FA0 /* SharedSequenceConvertibleType+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22AA60E26707ED9001B5FA0 /* SharedSequenceConvertibleType+Utilities.swift */; };
+		C2337175265AF98900144C90 /* Blog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2337174265AF98900144C90 /* Blog.swift */; };
+		C2337177265AFC0300144C90 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2337176265AFC0300144C90 /* Manager.swift */; };
+		C233717D265B13BE00144C90 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C233717C265B13BE00144C90 /* User.swift */; };
+		C233717F265B150100144C90 /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = C233717E265B150100144C90 /* Role.swift */; };
+		C2337182265B16C700144C90 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2337181265B16C700144C90 /* Environment.swift */; };
+		C2337184265B18C300144C90 /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2337183265B18C300144C90 /* UserDefaultManager.swift */; };
+		C2337187265B1C8A00144C90 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2337186265B1C8A00144C90 /* LogInViewController.swift */; };
+		C233718B265B1CA000144C90 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C233718A265B1CA000144C90 /* LogInView.swift */; };
+		C2337190265B2BEC00144C90 /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = C233718F265B2BEC00144C90 /* AccessToken.swift */; };
+		C25F2D632675451000FDEB75 /* String+HTML.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25F2D622675451000FDEB75 /* String+HTML.swift */; };
+		C25F2D9F2675CE0700FDEB75 /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25F2D9E2675CE0700FDEB75 /* Typography.swift */; };
+		C25F2DA42675CEFC00FDEB75 /* helvetica.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C25F2DA22675CEFC00FDEB75 /* helvetica.ttf */; };
+		C25F2DA52675D4CE00FDEB75 /* helveticaBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C25F2DA12675CEFC00FDEB75 /* helveticaBold.ttf */; };
+		C25F2DAB2675D72400FDEB75 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25F2DAA2675D72400FDEB75 /* R.generated.swift */; };
+		C25F2DAE2675D8CB00FDEB75 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C25F2DAC2675D8CB00FDEB75 /* Localizable.strings */; };
+		C26824192671C38000EE9429 /* BlogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26824162671C38000EE9429 /* BlogViewModel.swift */; };
+		C268241A2671C38000EE9429 /* BlogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26824172671C38000EE9429 /* BlogView.swift */; };
+		C268241B2671C38000EE9429 /* BlogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26824182671C38000EE9429 /* BlogViewController.swift */; };
+		C2737E9A267E5C0400AB6D25 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2737E99267E5C0400AB6D25 /* UserSession.swift */; };
+		C2737E9D267ECCB600AB6D25 /* MedicesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2737E9C267ECCB600AB6D25 /* MedicesViewModel.swift */; };
+		C2737E9F267ECCBE00AB6D25 /* MedicinesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2737E9E267ECCBE00AB6D25 /* MedicinesView.swift */; };
+		C2737EA1267ECCD100AB6D25 /* MedicinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2737EA0267ECCD100AB6D25 /* MedicinesViewController.swift */; };
+		C28299A52669E744007FE2B6 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28299A42669E744007FE2B6 /* RegisterView.swift */; };
+		C28299A72669E752007FE2B6 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28299A62669E752007FE2B6 /* RegisterViewController.swift */; };
+		C28299A92669E75D007FE2B6 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28299A82669E75D007FE2B6 /* RegisterViewModel.swift */; };
+		C28D0A1926891A0900A45F5F /* Medicine.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28D0A1826891A0900A45F5F /* Medicine.swift */; };
+		C28D0A1B26891B8700A45F5F /* Medication.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28D0A1A26891B8700A45F5F /* Medication.swift */; };
+		C28D0A1D26891EA700A45F5F /* MedicinesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28D0A1C26891EA700A45F5F /* MedicinesCell.swift */; };
+		C2D050362674589E004FC518 /* BlogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D050352674589E004FC518 /* BlogCell.swift */; };
+		C2D050382674645B004FC518 /* UIImage+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D050372674645B004FC518 /* UIImage+URL.swift */; };
+		C2D6265F268ABF4A00DC965D /* HTMLToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D6265E268ABF4A00DC965D /* HTMLToString.swift */; };
+		C2E670582665DAE80048647A /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E670572665DAE80048647A /* Color.swift */; };
+		C2E6705A2665E5080048647A /* ScaleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E670592665E5080048647A /* ScaleImage.swift */; };
+		C2E6705C2665EDFB0048647A /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E6705B2665EDFB0048647A /* Buttons.swift */; };
+		C2E6705E2665F75D0048647A /* UIView+ContainerViewConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E6705D2665F75D0048647A /* UIView+ContainerViewConstraints.swift */; };
+		F90BB5555ED21B987E41D636 /* Pods_to_farmaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58BD939138CAE4FD55FAE975 /* Pods_to_farmaTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C20B6AAC265850E300F93216 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C20B6A8D265850E200F93216 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C20B6A94265850E200F93216;
+			remoteInfo = "to-farma";
+		};
+		C20B6AB7265850E300F93216 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C20B6A8D265850E200F93216 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C20B6A94265850E200F93216;
+			remoteInfo = "to-farma";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		147B750480ABD6FCC47F2D99 /* Pods_to_farma.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_to_farma.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		32A35AA4E9E7D4E504FB0AA1 /* Pods-to-farma.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-to-farma.debug.xcconfig"; path = "Target Support Files/Pods-to-farma/Pods-to-farma.debug.xcconfig"; sourceTree = "<group>"; };
+		443682FA8C7F06D82D9C71DF /* Pods_to_farma_to_farmaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_to_farma_to_farmaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		58BD939138CAE4FD55FAE975 /* Pods_to_farmaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_to_farmaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		70896FCD3A60F719EB07E059 /* Pods-to-farmaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-to-farmaTests.debug.xcconfig"; path = "Target Support Files/Pods-to-farmaTests/Pods-to-farmaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		ABD5D848380068395B623C1E /* Pods-to-farmaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-to-farmaTests.release.xcconfig"; path = "Target Support Files/Pods-to-farmaTests/Pods-to-farmaTests.release.xcconfig"; sourceTree = "<group>"; };
+		B83A506AEDCC38ED0D38557F /* Pods-to-farma.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-to-farma.release.xcconfig"; path = "Target Support Files/Pods-to-farma/Pods-to-farma.release.xcconfig"; sourceTree = "<group>"; };
+		BC08123B49164E09125A691B /* Pods-to-farma-to-farmaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-to-farma-to-farmaUITests.debug.xcconfig"; path = "Target Support Files/Pods-to-farma-to-farmaUITests/Pods-to-farma-to-farmaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C20B6A95265850E200F93216 /* to-farma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "to-farma.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C20B6A98265850E200F93216 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C20B6AA1265850E300F93216 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C20B6AA6265850E300F93216 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C20B6AAB265850E300F93216 /* to-farmaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "to-farmaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C20B6AAF265850E300F93216 /* to_farmaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = to_farmaTests.swift; sourceTree = "<group>"; };
+		C20B6AB1265850E300F93216 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C20B6AB6265850E300F93216 /* to-farmaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "to-farmaUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C20B6ABA265850E300F93216 /* to_farmaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = to_farmaUITests.swift; sourceTree = "<group>"; };
+		C20B6ABC265850E300F93216 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C20B6ACC2658519200F93216 /* ToFarmaAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToFarmaAPI.swift; sourceTree = "<group>"; };
+		C210575F268FE72F007FDD74 /* MedicineModalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineModalController.swift; sourceTree = "<group>"; };
+		C2105761268FE73A007FDD74 /* MedicineModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineModalView.swift; sourceTree = "<group>"; };
+		C2115216269A5B8B0059E6BE /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		C2115218269A5B980059E6BE /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		C211521A269A5C1D0059E6BE /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		C211521C269A5E5A0059E6BE /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
+		C211521E269A60560059E6BE /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		C2144706266889580088B4F9 /* RectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleView.swift; sourceTree = "<group>"; };
+		C21CD5622685482300B754B9 /* MenuTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTabView.swift; sourceTree = "<group>"; };
+		C21CD56426854F5500B754B9 /* RegularUserNavigationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularUserNavigationViewModel.swift; sourceTree = "<group>"; };
+		C21CD566268550C900B754B9 /* RegularUserPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularUserPageViewController.swift; sourceTree = "<group>"; };
+		C21CD5682685549300B754B9 /* RegularUserNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularUserNavigationViewController.swift; sourceTree = "<group>"; };
+		C21FB9DD26818BC900A17CA8 /* ImageUnderline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUnderline.swift; sourceTree = "<group>"; };
+		C22AA606267068B5001B5FA0 /* LogSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogSessionView.swift; sourceTree = "<group>"; };
+		C22AA608267068CB001B5FA0 /* LogSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogSessionViewController.swift; sourceTree = "<group>"; };
+		C22AA60A26706921001B5FA0 /* LogSessionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogSessionModel.swift; sourceTree = "<group>"; };
+		C22AA60C267071EF001B5FA0 /* UIViewController+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Navigation.swift"; sourceTree = "<group>"; };
+		C22AA60E26707ED9001B5FA0 /* SharedSequenceConvertibleType+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SharedSequenceConvertibleType+Utilities.swift"; sourceTree = "<group>"; };
+		C2337174265AF98900144C90 /* Blog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blog.swift; sourceTree = "<group>"; };
+		C2337176265AFC0300144C90 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
+		C233717C265B13BE00144C90 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C233717E265B150100144C90 /* Role.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Role.swift; sourceTree = "<group>"; };
+		C2337181265B16C700144C90 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		C2337183265B18C300144C90 /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
+		C2337186265B1C8A00144C90 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		C233718A265B1CA000144C90 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
+		C233718E265B25C500144C90 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		C233718F265B2BEC00144C90 /* AccessToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessToken.swift; sourceTree = "<group>"; };
+		C25F2D622675451000FDEB75 /* String+HTML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+HTML.swift"; sourceTree = "<group>"; };
+		C25F2D9E2675CE0700FDEB75 /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
+		C25F2DA12675CEFC00FDEB75 /* helveticaBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = helveticaBold.ttf; sourceTree = "<group>"; };
+		C25F2DA22675CEFC00FDEB75 /* helvetica.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = helvetica.ttf; sourceTree = "<group>"; };
+		C25F2DAA2675D72400FDEB75 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		C25F2DAD2675D8CB00FDEB75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C26824162671C38000EE9429 /* BlogViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogViewModel.swift; sourceTree = "<group>"; };
+		C26824172671C38000EE9429 /* BlogView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogView.swift; sourceTree = "<group>"; };
+		C26824182671C38000EE9429 /* BlogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogViewController.swift; sourceTree = "<group>"; };
+		C2737E99267E5C0400AB6D25 /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
+		C2737E9C267ECCB600AB6D25 /* MedicesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicesViewModel.swift; sourceTree = "<group>"; };
+		C2737E9E267ECCBE00AB6D25 /* MedicinesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicinesView.swift; sourceTree = "<group>"; };
+		C2737EA0267ECCD100AB6D25 /* MedicinesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicinesViewController.swift; sourceTree = "<group>"; };
+		C28299A42669E744007FE2B6 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		C28299A62669E752007FE2B6 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		C28299A82669E75D007FE2B6 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		C28D0A1826891A0900A45F5F /* Medicine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medicine.swift; sourceTree = "<group>"; };
+		C28D0A1A26891B8700A45F5F /* Medication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medication.swift; sourceTree = "<group>"; };
+		C28D0A1C26891EA700A45F5F /* MedicinesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicinesCell.swift; sourceTree = "<group>"; };
+		C2D050352674589E004FC518 /* BlogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogCell.swift; sourceTree = "<group>"; };
+		C2D050372674645B004FC518 /* UIImage+URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+URL.swift"; sourceTree = "<group>"; };
+		C2D6265E268ABF4A00DC965D /* HTMLToString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLToString.swift; sourceTree = "<group>"; };
+		C2E670572665DAE80048647A /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		C2E670592665E5080048647A /* ScaleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleImage.swift; sourceTree = "<group>"; };
+		C2E6705B2665EDFB0048647A /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
+		C2E6705D2665F75D0048647A /* UIView+ContainerViewConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ContainerViewConstraints.swift"; sourceTree = "<group>"; };
+		E90D8C3362C6E443A7E1A861 /* Pods-to-farma-to-farmaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-to-farma-to-farmaUITests.release.xcconfig"; path = "Target Support Files/Pods-to-farma-to-farmaUITests/Pods-to-farma-to-farmaUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C20B6A92265850E200F93216 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE55ADBC54E2B1FC8CEC986C /* Pods_to_farma.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C20B6AA8265850E300F93216 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F90BB5555ED21B987E41D636 /* Pods_to_farmaTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C20B6AB3265850E300F93216 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				012C3BFD609208B092889BA3 /* Pods_to_farma_to_farmaUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2A00892FEB10972088B026D9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				147B750480ABD6FCC47F2D99 /* Pods_to_farma.framework */,
+				443682FA8C7F06D82D9C71DF /* Pods_to_farma_to_farmaUITests.framework */,
+				58BD939138CAE4FD55FAE975 /* Pods_to_farmaTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7A2CD4BBA8A41B1BCC3F2087 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				32A35AA4E9E7D4E504FB0AA1 /* Pods-to-farma.debug.xcconfig */,
+				B83A506AEDCC38ED0D38557F /* Pods-to-farma.release.xcconfig */,
+				BC08123B49164E09125A691B /* Pods-to-farma-to-farmaUITests.debug.xcconfig */,
+				E90D8C3362C6E443A7E1A861 /* Pods-to-farma-to-farmaUITests.release.xcconfig */,
+				70896FCD3A60F719EB07E059 /* Pods-to-farmaTests.debug.xcconfig */,
+				ABD5D848380068395B623C1E /* Pods-to-farmaTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C20B6A8C265850E200F93216 = {
+			isa = PBXGroup;
+			children = (
+				C25F2DAC2675D8CB00FDEB75 /* Localizable.strings */,
+				C25F2DAA2675D72400FDEB75 /* R.generated.swift */,
+				C20B6A97265850E200F93216 /* to-farma */,
+				C20B6AAE265850E300F93216 /* to-farmaTests */,
+				C20B6AB9265850E300F93216 /* to-farmaUITests */,
+				C20B6A96265850E200F93216 /* Products */,
+				7A2CD4BBA8A41B1BCC3F2087 /* Pods */,
+				2A00892FEB10972088B026D9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C20B6A96265850E200F93216 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C20B6A95265850E200F93216 /* to-farma.app */,
+				C20B6AAB265850E300F93216 /* to-farmaTests.xctest */,
+				C20B6AB6265850E300F93216 /* to-farmaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C20B6A97265850E200F93216 /* to-farma */ = {
+			isa = PBXGroup;
+			children = (
+				C25F2DA22675CEFC00FDEB75 /* helvetica.ttf */,
+				C25F2DA12675CEFC00FDEB75 /* helveticaBold.ttf */,
+				C2E670562665DADA0048647A /* Resources */,
+				C233718C265B258600144C90 /* Supporting Files */,
+				C2337180265B16BE00144C90 /* App */,
+				C2337173265AF97C00144C90 /* Models */,
+				C2337172265AF97000144C90 /* Views */,
+				C20B6ACB2658517F00F93216 /* Network */,
+				C20B6AA1265850E300F93216 /* Assets.xcassets */,
+				C20B6AA6265850E300F93216 /* Info.plist */,
+			);
+			path = "to-farma";
+			sourceTree = "<group>";
+		};
+		C20B6AAE265850E300F93216 /* to-farmaTests */ = {
+			isa = PBXGroup;
+			children = (
+				C20B6AAF265850E300F93216 /* to_farmaTests.swift */,
+				C20B6AB1265850E300F93216 /* Info.plist */,
+			);
+			path = "to-farmaTests";
+			sourceTree = "<group>";
+		};
+		C20B6AB9265850E300F93216 /* to-farmaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C20B6ABA265850E300F93216 /* to_farmaUITests.swift */,
+				C20B6ABC265850E300F93216 /* Info.plist */,
+			);
+			path = "to-farmaUITests";
+			sourceTree = "<group>";
+		};
+		C20B6ACB2658517F00F93216 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C2337176265AFC0300144C90 /* Manager.swift */,
+				C20B6ACC2658519200F93216 /* ToFarmaAPI.swift */,
+				C2337183265B18C300144C90 /* UserDefaultManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		C210575C268FE6F9007FDD74 /* MedicinesModal */ = {
+			isa = PBXGroup;
+			children = (
+				C210575F268FE72F007FDD74 /* MedicineModalController.swift */,
+				C2105761268FE73A007FDD74 /* MedicineModalView.swift */,
+			);
+			path = MedicinesModal;
+			sourceTree = "<group>";
+		};
+		C2115215269A5B460059E6BE /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				C2115216269A5B8B0059E6BE /* ChatView.swift */,
+				C2115218269A5B980059E6BE /* ChatViewController.swift */,
+				C211521A269A5C1D0059E6BE /* ChatViewModel.swift */,
+				C211521C269A5E5A0059E6BE /* ChatCell.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		C21447052668893F0088B4F9 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C2144706266889580088B4F9 /* RectangleView.swift */,
+				C25F2D622675451000FDEB75 /* String+HTML.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		C21CD561268546BA00B754B9 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				C21CD5622685482300B754B9 /* MenuTabView.swift */,
+				C21CD56426854F5500B754B9 /* RegularUserNavigationViewModel.swift */,
+				C21CD566268550C900B754B9 /* RegularUserPageViewController.swift */,
+				C21CD5682685549300B754B9 /* RegularUserNavigationViewController.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		C2337172265AF97000144C90 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C2115215269A5B460059E6BE /* Chat */,
+				C21CD561268546BA00B754B9 /* Menu */,
+				C2737E9B267ECC8400AB6D25 /* Medicamentos */,
+				C26824152671C34400EE9429 /* Blog */,
+				C24C4163266F2075004FC1BA /* InicioSesion */,
+				C28299A32669E72B007FE2B6 /* Registro */,
+				C2337185265B1C7C00144C90 /* LogIn */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C2337173265AF97C00144C90 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C2337174265AF98900144C90 /* Blog.swift */,
+				C233717C265B13BE00144C90 /* User.swift */,
+				C233717E265B150100144C90 /* Role.swift */,
+				C233718F265B2BEC00144C90 /* AccessToken.swift */,
+				C28D0A1826891A0900A45F5F /* Medicine.swift */,
+				C28D0A1A26891B8700A45F5F /* Medication.swift */,
+				C211521E269A60560059E6BE /* Message.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C2337180265B16BE00144C90 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C20B6A98265850E200F93216 /* AppDelegate.swift */,
+				C2337181265B16C700144C90 /* Environment.swift */,
+				C2737E99267E5C0400AB6D25 /* UserSession.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C2337185265B1C7C00144C90 /* LogIn */ = {
+			isa = PBXGroup;
+			children = (
+				C2337186265B1C8A00144C90 /* LogInViewController.swift */,
+				C233718A265B1CA000144C90 /* LogInView.swift */,
+			);
+			path = LogIn;
+			sourceTree = "<group>";
+		};
+		C233718C265B258600144C90 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C233718E265B25C500144C90 /* Config.xcconfig */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C24C4163266F2075004FC1BA /* InicioSesion */ = {
+			isa = PBXGroup;
+			children = (
+				C22AA606267068B5001B5FA0 /* LogSessionView.swift */,
+				C22AA608267068CB001B5FA0 /* LogSessionViewController.swift */,
+				C22AA60A26706921001B5FA0 /* LogSessionModel.swift */,
+			);
+			path = InicioSesion;
+			sourceTree = "<group>";
+		};
+		C25F2DA02675CE3F00FDEB75 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		C26824152671C34400EE9429 /* Blog */ = {
+			isa = PBXGroup;
+			children = (
+				C26824162671C38000EE9429 /* BlogViewModel.swift */,
+				C26824172671C38000EE9429 /* BlogView.swift */,
+				C26824182671C38000EE9429 /* BlogViewController.swift */,
+				C2D050352674589E004FC518 /* BlogCell.swift */,
+			);
+			path = Blog;
+			sourceTree = "<group>";
+		};
+		C2737E9B267ECC8400AB6D25 /* Medicamentos */ = {
+			isa = PBXGroup;
+			children = (
+				C210575C268FE6F9007FDD74 /* MedicinesModal */,
+				C2737E9C267ECCB600AB6D25 /* MedicesViewModel.swift */,
+				C2737E9E267ECCBE00AB6D25 /* MedicinesView.swift */,
+				C2737EA0267ECCD100AB6D25 /* MedicinesViewController.swift */,
+				C28D0A1C26891EA700A45F5F /* MedicinesCell.swift */,
+			);
+			path = Medicamentos;
+			sourceTree = "<group>";
+		};
+		C28299A32669E72B007FE2B6 /* Registro */ = {
+			isa = PBXGroup;
+			children = (
+				C28299A42669E744007FE2B6 /* RegisterView.swift */,
+				C28299A62669E752007FE2B6 /* RegisterViewController.swift */,
+				C28299A82669E75D007FE2B6 /* RegisterViewModel.swift */,
+			);
+			path = Registro;
+			sourceTree = "<group>";
+		};
+		C2E670562665DADA0048647A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C25F2DA02675CE3F00FDEB75 /* Fonts */,
+				C21447052668893F0088B4F9 /* Components */,
+				C2E670572665DAE80048647A /* Color.swift */,
+				C2E670592665E5080048647A /* ScaleImage.swift */,
+				C2E6705B2665EDFB0048647A /* Buttons.swift */,
+				C2E6705D2665F75D0048647A /* UIView+ContainerViewConstraints.swift */,
+				C22AA60C267071EF001B5FA0 /* UIViewController+Navigation.swift */,
+				C22AA60E26707ED9001B5FA0 /* SharedSequenceConvertibleType+Utilities.swift */,
+				C2D050372674645B004FC518 /* UIImage+URL.swift */,
+				C25F2D9E2675CE0700FDEB75 /* Typography.swift */,
+				C21FB9DD26818BC900A17CA8 /* ImageUnderline.swift */,
+				C2D6265E268ABF4A00DC965D /* HTMLToString.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C20B6A94265850E200F93216 /* to-farma */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C20B6ABF265850E300F93216 /* Build configuration list for PBXNativeTarget "to-farma" */;
+			buildPhases = (
+				0B462E42AB88373368F53A89 /* [CP] Check Pods Manifest.lock */,
+				C20B6A91265850E200F93216 /* Sources */,
+				C20B6A92265850E200F93216 /* Frameworks */,
+				C20B6A93265850E200F93216 /* Resources */,
+				4825E34C08D40F9106DB9A57 /* [CP] Embed Pods Frameworks */,
+				C25F2D902675B3C200FDEB75 /* Run Script */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "to-farma";
+			productName = "to-farma";
+			productReference = C20B6A95265850E200F93216 /* to-farma.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C20B6AAA265850E300F93216 /* to-farmaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C20B6AC2265850E300F93216 /* Build configuration list for PBXNativeTarget "to-farmaTests" */;
+			buildPhases = (
+				CD51D2119CC047ADD3629EFF /* [CP] Check Pods Manifest.lock */,
+				C20B6AA7265850E300F93216 /* Sources */,
+				C20B6AA8265850E300F93216 /* Frameworks */,
+				C20B6AA9265850E300F93216 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C20B6AAD265850E300F93216 /* PBXTargetDependency */,
+			);
+			name = "to-farmaTests";
+			productName = "to-farmaTests";
+			productReference = C20B6AAB265850E300F93216 /* to-farmaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C20B6AB5265850E300F93216 /* to-farmaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C20B6AC5265850E300F93216 /* Build configuration list for PBXNativeTarget "to-farmaUITests" */;
+			buildPhases = (
+				29537B6E82D739DCC979651C /* [CP] Check Pods Manifest.lock */,
+				C20B6AB2265850E300F93216 /* Sources */,
+				C20B6AB3265850E300F93216 /* Frameworks */,
+				C20B6AB4265850E300F93216 /* Resources */,
+				2F5D09E71B8FD44D788428F2 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C20B6AB8265850E300F93216 /* PBXTargetDependency */,
+			);
+			name = "to-farmaUITests";
+			productName = "to-farmaUITests";
+			productReference = C20B6AB6265850E300F93216 /* to-farmaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C20B6A8D265850E200F93216 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					C20B6A94265850E200F93216 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					C20B6AAA265850E300F93216 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = C20B6A94265850E200F93216;
+					};
+					C20B6AB5265850E300F93216 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = C20B6A94265850E200F93216;
+					};
+				};
+			};
+			buildConfigurationList = C20B6A90265850E200F93216 /* Build configuration list for PBXProject "to-farma" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C20B6A8C265850E200F93216;
+			productRefGroup = C20B6A96265850E200F93216 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C20B6A94265850E200F93216 /* to-farma */,
+				C20B6AAA265850E300F93216 /* to-farmaTests */,
+				C20B6AB5265850E300F93216 /* to-farmaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C20B6A93265850E200F93216 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C20B6AA2265850E300F93216 /* Assets.xcassets in Resources */,
+				C25F2DAE2675D8CB00FDEB75 /* Localizable.strings in Resources */,
+				C25F2DA42675CEFC00FDEB75 /* helvetica.ttf in Resources */,
+				C25F2DA52675D4CE00FDEB75 /* helveticaBold.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C20B6AA9265850E300F93216 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C20B6AB4265850E300F93216 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0B462E42AB88373368F53A89 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-to-farma-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		29537B6E82D739DCC979651C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-to-farma-to-farmaUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2F5D09E71B8FD44D788428F2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-to-farma-to-farmaUITests/Pods-to-farma-to-farmaUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-to-farma-to-farmaUITests/Pods-to-farma-to-farmaUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-to-farma-to-farmaUITests/Pods-to-farma-to-farmaUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4825E34C08D40F9106DB9A57 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-to-farma/Pods-to-farma-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-to-farma/Pods-to-farma-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-to-farma/Pods-to-farma-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C25F2D902675B3C200FDEB75 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+		CD51D2119CC047ADD3629EFF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-to-farmaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C20B6A91265850E200F93216 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C233718B265B1CA000144C90 /* LogInView.swift in Sources */,
+				C2737E9D267ECCB600AB6D25 /* MedicesViewModel.swift in Sources */,
+				C2337190265B2BEC00144C90 /* AccessToken.swift in Sources */,
+				C2115219269A5B980059E6BE /* ChatViewController.swift in Sources */,
+				C21CD567268550C900B754B9 /* RegularUserPageViewController.swift in Sources */,
+				C2115217269A5B8B0059E6BE /* ChatView.swift in Sources */,
+				C21CD5632685482300B754B9 /* MenuTabView.swift in Sources */,
+				C268241B2671C38000EE9429 /* BlogViewController.swift in Sources */,
+				C22AA60F26707ED9001B5FA0 /* SharedSequenceConvertibleType+Utilities.swift in Sources */,
+				C211521F269A60560059E6BE /* Message.swift in Sources */,
+				C28D0A1926891A0900A45F5F /* Medicine.swift in Sources */,
+				C2E6705A2665E5080048647A /* ScaleImage.swift in Sources */,
+				C2337177265AFC0300144C90 /* Manager.swift in Sources */,
+				C20B6A99265850E200F93216 /* AppDelegate.swift in Sources */,
+				C2E6705C2665EDFB0048647A /* Buttons.swift in Sources */,
+				C268241A2671C38000EE9429 /* BlogView.swift in Sources */,
+				C22AA607267068B5001B5FA0 /* LogSessionView.swift in Sources */,
+				C2D050362674589E004FC518 /* BlogCell.swift in Sources */,
+				C28299A52669E744007FE2B6 /* RegisterView.swift in Sources */,
+				C2337175265AF98900144C90 /* Blog.swift in Sources */,
+				C26824192671C38000EE9429 /* BlogViewModel.swift in Sources */,
+				C211521D269A5E5A0059E6BE /* ChatCell.swift in Sources */,
+				C2105762268FE73A007FDD74 /* MedicineModalView.swift in Sources */,
+				C233717D265B13BE00144C90 /* User.swift in Sources */,
+				C28299A72669E752007FE2B6 /* RegisterViewController.swift in Sources */,
+				C22AA60D267071EF001B5FA0 /* UIViewController+Navigation.swift in Sources */,
+				C22AA609267068CB001B5FA0 /* LogSessionViewController.swift in Sources */,
+				C2D6265F268ABF4A00DC965D /* HTMLToString.swift in Sources */,
+				C2337187265B1C8A00144C90 /* LogInViewController.swift in Sources */,
+				C25F2DAB2675D72400FDEB75 /* R.generated.swift in Sources */,
+				C2737E9F267ECCBE00AB6D25 /* MedicinesView.swift in Sources */,
+				C22AA60B26706921001B5FA0 /* LogSessionModel.swift in Sources */,
+				C2E670582665DAE80048647A /* Color.swift in Sources */,
+				C2337184265B18C300144C90 /* UserDefaultManager.swift in Sources */,
+				C2337182265B16C700144C90 /* Environment.swift in Sources */,
+				C2737E9A267E5C0400AB6D25 /* UserSession.swift in Sources */,
+				C2105760268FE72F007FDD74 /* MedicineModalController.swift in Sources */,
+				C28299A92669E75D007FE2B6 /* RegisterViewModel.swift in Sources */,
+				C28D0A1D26891EA700A45F5F /* MedicinesCell.swift in Sources */,
+				C2144707266889580088B4F9 /* RectangleView.swift in Sources */,
+				C211521B269A5C1D0059E6BE /* ChatViewModel.swift in Sources */,
+				C21FB9DE26818BC900A17CA8 /* ImageUnderline.swift in Sources */,
+				C20B6ACD2658519200F93216 /* ToFarmaAPI.swift in Sources */,
+				C28D0A1B26891B8700A45F5F /* Medication.swift in Sources */,
+				C21CD5692685549300B754B9 /* RegularUserNavigationViewController.swift in Sources */,
+				C21CD56526854F5500B754B9 /* RegularUserNavigationViewModel.swift in Sources */,
+				C2D050382674645B004FC518 /* UIImage+URL.swift in Sources */,
+				C25F2D632675451000FDEB75 /* String+HTML.swift in Sources */,
+				C2737EA1267ECCD100AB6D25 /* MedicinesViewController.swift in Sources */,
+				C233717F265B150100144C90 /* Role.swift in Sources */,
+				C25F2D9F2675CE0700FDEB75 /* Typography.swift in Sources */,
+				C2E6705E2665F75D0048647A /* UIView+ContainerViewConstraints.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C20B6AA7265850E300F93216 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C20B6AB0265850E300F93216 /* to_farmaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C20B6AB2265850E300F93216 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C20B6ABB265850E300F93216 /* to_farmaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C20B6AAD265850E300F93216 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C20B6A94265850E200F93216 /* to-farma */;
+			targetProxy = C20B6AAC265850E300F93216 /* PBXContainerItemProxy */;
+		};
+		C20B6AB8265850E300F93216 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C20B6A94265850E200F93216 /* to-farma */;
+			targetProxy = C20B6AB7265850E300F93216 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C25F2DAC2675D8CB00FDEB75 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C25F2DAD2675D8CB00FDEB75 /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C20B6ABD265850E300F93216 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C233718E265B25C500144C90 /* Config.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C20B6AC0265850E300F93216 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32A35AA4E9E7D4E504FB0AA1 /* Pods-to-farma.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U5F6G4762J;
+				INFOPLIST_FILE = "to-farma/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "to-farma.to-farma";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C20B6AC3265850E300F93216 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70896FCD3A60F719EB07E059 /* Pods-to-farmaTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U5F6G4762J;
+				INFOPLIST_FILE = "to-farmaTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "to-farma.to-farmaTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/to-farma.app/to-farma";
+			};
+			name = Debug;
+		};
+		C20B6AC6265850E300F93216 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC08123B49164E09125A691B /* Pods-to-farma-to-farmaUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U5F6G4762J;
+				INFOPLIST_FILE = "to-farmaUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "to-farma.to-farmaUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "to-farma";
+			};
+			name = Debug;
+		};
+		C2CC397F265F4FF4006E03BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C233718E265B25C500144C90 /* Config.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Release;
+		};
+		C2CC3980265F4FF4006E03BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B83A506AEDCC38ED0D38557F /* Pods-to-farma.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U5F6G4762J;
+				INFOPLIST_FILE = "to-farma/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "to-farma.to-farma";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C2CC3981265F4FF4006E03BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABD5D848380068395B623C1E /* Pods-to-farmaTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U5F6G4762J;
+				INFOPLIST_FILE = "to-farmaTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "to-farma.to-farmaTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/to-farma.app/to-farma";
+			};
+			name = Release;
+		};
+		C2CC3982265F4FF4006E03BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E90D8C3362C6E443A7E1A861 /* Pods-to-farma-to-farmaUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U5F6G4762J;
+				INFOPLIST_FILE = "to-farmaUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "to-farma.to-farmaUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "to-farma";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C20B6A90265850E200F93216 /* Build configuration list for PBXProject "to-farma" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C20B6ABD265850E300F93216 /* Debug */,
+				C2CC397F265F4FF4006E03BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C20B6ABF265850E300F93216 /* Build configuration list for PBXNativeTarget "to-farma" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C20B6AC0265850E300F93216 /* Debug */,
+				C2CC3980265F4FF4006E03BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C20B6AC2265850E300F93216 /* Build configuration list for PBXNativeTarget "to-farmaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C20B6AC3265850E300F93216 /* Debug */,
+				C2CC3981265F4FF4006E03BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C20B6AC5265850E300F93216 /* Build configuration list for PBXNativeTarget "to-farmaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C20B6AC6265850E300F93216 /* Debug */,
+				C2CC3982265F4FF4006E03BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C20B6A8D265850E200F93216 /* Project object */;
+}

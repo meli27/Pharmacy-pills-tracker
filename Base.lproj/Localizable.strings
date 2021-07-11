@@ -1,7 +1,22 @@
-/* 
+/*
   Localizable.strings
   to-farma
 
-  Created by Melissa Villalobos on 13/6/21.
+  Created by Melissa Villalobos on 12/6/21.
   
 */
+
+"logIn_Iniciar" = "Iniciar";
+"logIn_Registrarse" = "Registrarse";
+"registro_Registrar" = "REGISTRO";
+"registro_Nombre" = "Nombre";
+"registro_Telefono" = "TELÉFONO";
+"registro_Correo" = "CORREO ELECTRÓNICO";
+"registro_Clave" = "CLAVE";
+"registro_SolicitarRegistro" = "SOLICITAR REGISTRO";
+"inicio_sesion" = "INICIO DE SESIÓN";
+"iniciar_sesion" = "INICIAR SESIÓN";
+"blog" = "BLOG";
+"ver_mas" = "VER MÁS";
+"medicamentos_titulo" = "MEDICAMENTOS";
+"chat_titulo" = "BUZÓN";

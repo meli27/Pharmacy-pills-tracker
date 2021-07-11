@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+struct Medicine: Codable{
+    let id: Int?
+    let logo: String?
+    let name: String?
+    let measurementUnits: String?
+    let presentation: String?
+    let quantity: Int?
+    let dataSheet: String?
+}

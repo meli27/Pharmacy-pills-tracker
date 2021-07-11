@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct Message: Codable{
+    let id: Int
+    let text: String
+  //  let sender: User
+  //  let receiver: User
+}
