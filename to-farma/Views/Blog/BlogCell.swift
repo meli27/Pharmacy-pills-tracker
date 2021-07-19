@@ -10,7 +10,7 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-class BlogCell: UICollectionViewCell {
+class BlogCell: UICollectionViewCell {    
     var postUserImage = UIImageView()
     var title = UILabel()
     var date = UILabel()
@@ -37,9 +37,22 @@ class BlogCell: UICollectionViewCell {
     }
     
     private func setLayouts() {
-        translatesAutoresizingMaskIntoConstraints = false
+       // translatesAutoresizingMaskIntoConstraints = false
         backgroundColor = Color.lightGray
         layer.cornerRadius = 10
+        
+//        if switchMore.isOn {
+            NSLayoutConstraint.activate([
+            //    self.heightAnchor.constraint(equalToConstant: 550),
+                self.widthAnchor.constraint(equalToConstant: 400)
+            ])
+//        } else {
+//            NSLayoutConstraint.activate([
+//                self.heightAnchor.constraint(equalToConstant: 550),
+//                self.widthAnchor.constraint(equalToConstant: 400)
+//            ])
+//            cellIntrinsicContentSize
+//        }
         
         cardView.axis = .vertical
         cardView.spacing = 15
@@ -97,29 +110,29 @@ class BlogCell: UICollectionViewCell {
         viewMoreStackView.spacing = 8
         cardView.addArrangedSubview(viewMoreStackView)
         
-        switchMore.translatesAutoresizingMaskIntoConstraints = false
-        switchMore.onTintColor = Color.primaryColor
-        viewMoreStackView.addArrangedSubview(switchMore)
-        
-        viewMore.font = UIFont.systemFont(ofSize: 18, weight: .bold)
-        viewMore.translatesAutoresizingMaskIntoConstraints = false
-        viewMore.text = R.string.localizable.ver_mas()
-        viewMoreStackView.addArrangedSubview(viewMore)
+//        switchMore.translatesAutoresizingMaskIntoConstraints = false
+//        switchMore.onTintColor = Color.primaryColor
+//        viewMoreStackView.addArrangedSubview(switchMore)
+//        
+//        viewMore.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+//        viewMore.translatesAutoresizingMaskIntoConstraints = false
+//        viewMore.text = R.string.localizable.ver_mas()
+//        viewMoreStackView.addArrangedSubview(viewMore)
     }
     
-    override func layoutSubviews() {
-        let textHeight = text.text?.height(withConstrainedWidth: 400, font: UIFont.systemFont(ofSize: 18))
-        let totalHeight = 485 + (textHeight ?? 0.0) + switchMore.frame.size.height
-        cellIntrinsicContentSize =  CGSize(width: 400, height:  totalHeight)
-        invalidateIntrinsicContentSize()
-    }
+//    override func layoutSubviews() {
+//        let textHeight = text.text?.height(withConstrainedWidth: 400, font: UIFont.systemFont(ofSize: 18))
+//        let totalHeight = 485 + (textHeight ?? 0.0) + switchMore.frame.size.height
+//        cellIntrinsicContentSize =  CGSize(width: 400, height:  totalHeight)
+//        invalidateIntrinsicContentSize()
+//    }
 }
 
-extension String {
-    func height(withConstrainedWidth width: CGFloat, font: UIFont) -> CGFloat {
-        let constraintRect = CGSize(width: width, height: .greatestFiniteMagnitude)
-        let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil)
-    
-        return ceil(boundingBox.height)
-    }
-}
+//extension String {
+//    func height(withConstrainedWidth width: CGFloat, font: UIFont) -> CGFloat {
+//        let constraintRect = CGSize(width: width, height: .greatestFiniteMagnitude)
+//        let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil)
+//
+//        return ceil(boundingBox.height)
+//    }
+

@@ -23,6 +23,11 @@ class RegularUserNavigationViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
     override func loadView() {
         super.loadView()
         self.setupLayout()

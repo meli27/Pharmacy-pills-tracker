@@ -161,7 +161,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 9 images.
+  /// This `R.image` struct is generated, and contains static references to 15 images.
   struct image {
     /// Image `Back`.
     static let back = Rswift.ImageResource(bundle: R.hostingBundle, name: "Back")
@@ -171,10 +171,22 @@ struct R: Rswift.Validatable {
     static let buzon = Rswift.ImageResource(bundle: R.hostingBundle, name: "buzon")
     /// Image `car`.
     static let car = Rswift.ImageResource(bundle: R.hostingBundle, name: "car")
+    /// Image `iconDown16`.
+    static let iconDown16 = Rswift.ImageResource(bundle: R.hostingBundle, name: "iconDown16")
+    /// Image `iconEmptyState`.
+    static let iconEmptyState = Rswift.ImageResource(bundle: R.hostingBundle, name: "iconEmptyState")
+    /// Image `iconSearchBar`.
+    static let iconSearchBar = Rswift.ImageResource(bundle: R.hostingBundle, name: "iconSearchBar")
     /// Image `medicamentos`.
     static let medicamentos = Rswift.ImageResource(bundle: R.hostingBundle, name: "medicamentos")
+    /// Image `minus`.
+    static let minus = Rswift.ImageResource(bundle: R.hostingBundle, name: "minus")
     /// Image `pedidos`.
     static let pedidos = Rswift.ImageResource(bundle: R.hostingBundle, name: "pedidos")
+    /// Image `plus`.
+    static let plus = Rswift.ImageResource(bundle: R.hostingBundle, name: "plus")
+    /// Image `send`.
+    static let send = Rswift.ImageResource(bundle: R.hostingBundle, name: "send")
     /// Image `toFarmaLogo2`.
     static let toFarmaLogo2 = Rswift.ImageResource(bundle: R.hostingBundle, name: "toFarmaLogo2")
     /// Image `toFarmaLogo`.
@@ -211,6 +223,27 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "iconDown16", bundle: ..., traitCollection: ...)`
+    static func iconDown16(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.iconDown16, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "iconEmptyState", bundle: ..., traitCollection: ...)`
+    static func iconEmptyState(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.iconEmptyState, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "iconSearchBar", bundle: ..., traitCollection: ...)`
+    static func iconSearchBar(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.iconSearchBar, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "medicamentos", bundle: ..., traitCollection: ...)`
     static func medicamentos(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.medicamentos, compatibleWith: traitCollection)
@@ -218,9 +251,30 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "minus", bundle: ..., traitCollection: ...)`
+    static func minus(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.minus, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "pedidos", bundle: ..., traitCollection: ...)`
     static func pedidos(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.pedidos, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "plus", bundle: ..., traitCollection: ...)`
+    static func plus(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.plus, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "send", bundle: ..., traitCollection: ...)`
+    static func send(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.send, compatibleWith: traitCollection)
     }
     #endif
 
@@ -262,13 +316,13 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 14 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 16 localization keys.
     struct localizable {
       /// Base translation: BLOG
       ///
       /// Locales: Base
       static let blog = Rswift.StringResource(key: "blog", tableName: "Localizable", bundle: R.hostingBundle, locales: ["Base"], comment: nil)
-      /// Base translation: CHAT
+      /// Base translation: BUZÓN
       ///
       /// Locales: Base
       static let chat_titulo = Rswift.StringResource(key: "chat_titulo", tableName: "Localizable", bundle: R.hostingBundle, locales: ["Base"], comment: nil)
@@ -280,6 +334,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: Base
       static let registro_Correo = Rswift.StringResource(key: "registro_Correo", tableName: "Localizable", bundle: R.hostingBundle, locales: ["Base"], comment: nil)
+      /// Base translation: Categorias
+      ///
+      /// Locales: Base
+      static let pedidos_categorias = Rswift.StringResource(key: "pedidos_categorias", tableName: "Localizable", bundle: R.hostingBundle, locales: ["Base"], comment: nil)
       /// Base translation: INICIAR SESIÓN
       ///
       /// Locales: Base
@@ -300,6 +358,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: Base
       static let registro_Nombre = Rswift.StringResource(key: "registro_Nombre", tableName: "Localizable", bundle: R.hostingBundle, locales: ["Base"], comment: nil)
+      /// Base translation: PEDIDOS
+      ///
+      /// Locales: Base
+      static let pedidos_titulo = Rswift.StringResource(key: "pedidos_titulo", tableName: "Localizable", bundle: R.hostingBundle, locales: ["Base"], comment: nil)
       /// Base translation: REGISTRO
       ///
       /// Locales: Base
@@ -336,19 +398,19 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("blog", bundle: bundle, value: "BLOG", comment: "")
       }
 
-      /// Base translation: CHAT
+      /// Base translation: BUZÓN
       ///
       /// Locales: Base
       static func chat_titulo(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
-          return NSLocalizedString("chat_titulo", bundle: hostingBundle, value: "CHAT", comment: "")
+          return NSLocalizedString("chat_titulo", bundle: hostingBundle, value: "BUZÓN", comment: "")
         }
 
         guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
           return "chat_titulo"
         }
 
-        return NSLocalizedString("chat_titulo", bundle: bundle, value: "CHAT", comment: "")
+        return NSLocalizedString("chat_titulo", bundle: bundle, value: "BUZÓN", comment: "")
       }
 
       /// Base translation: CLAVE
@@ -379,6 +441,21 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("registro_Correo", bundle: bundle, value: "CORREO ELECTRÓNICO", comment: "")
+      }
+
+      /// Base translation: Categorias
+      ///
+      /// Locales: Base
+      static func pedidos_categorias(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("pedidos_categorias", bundle: hostingBundle, value: "Categorias", comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "pedidos_categorias"
+        }
+
+        return NSLocalizedString("pedidos_categorias", bundle: bundle, value: "Categorias", comment: "")
       }
 
       /// Base translation: INICIAR SESIÓN
@@ -454,6 +531,21 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("registro_Nombre", bundle: bundle, value: "Nombre", comment: "")
+      }
+
+      /// Base translation: PEDIDOS
+      ///
+      /// Locales: Base
+      static func pedidos_titulo(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("pedidos_titulo", bundle: hostingBundle, value: "PEDIDOS", comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "pedidos_titulo"
+        }
+
+        return NSLocalizedString("pedidos_titulo", bundle: bundle, value: "PEDIDOS", comment: "")
       }
 
       /// Base translation: REGISTRO

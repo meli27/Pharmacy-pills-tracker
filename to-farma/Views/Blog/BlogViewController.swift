@@ -22,6 +22,42 @@ class BlogViewController: UIViewController {
     init() {
         self.viewModel = BlogViewModel()
         super.init(nibName: nil, bundle: nil)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func loadView() {
+        super.loadView()
+        self.view = contentView
+        
+        let flowLayout = UICollectionViewFlowLayout()
+        flowLayout.scrollDirection = .vertical
+        //flowLayout.estimatedItemSize = CGSize(width: 400, height: 550)
+        flowLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+
+        self.postCollection = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
+        postCollection.backgroundColor = .white
+        postCollection.translatesAutoresizingMaskIntoConstraints = false
+        self.contentView.mainStack.addArrangedSubview(postCollection)
+        
+        NSLayoutConstraint.activate([
+            self.postCollection.leftAnchor.constraint(equalTo: self.contentView.leftAnchor),
+            self.postCollection.rightAnchor.constraint(equalTo: self.contentView.rightAnchor)
+        ])
+        
+        self.postCollection.register(BlogCell.self, forCellWithReuseIdentifier: "BlogCell")
+    }
+    
+    override func viewDidLoad() {
+        self.view = contentView
+        super.viewDidLoad()
         
         dataSource = RxCollectionViewSectionedReloadDataSource<SectionOfPosts>(configureCell: { _, collectionView, indexPath, post -> UICollectionViewCell in
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier:
@@ -44,66 +80,48 @@ class BlogViewController: UIViewController {
                 .flatMapLatest { _ in cell.switchMore.rx.isOn }
                 .asDriver(onErrorDriveWith: Driver.empty())
                 .drive(onNext: { [weak self] isOn in
-                    self?.selectedCellIndexPath[indexPath] = (isOn: isOn, cell: cell)
-                    collectionView.performBatchUpdates({}, completion: {_ in })
+                   // self?.selectedCellIndexPath[indexPath] = (isOn: isOn, cell: cell)
+                    self?.postCollection.performBatchUpdates({}, completion: {_ in })
                 })
                 .disposed(by: cell.disposeBag)
             
-            
             return cell
         })
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func loadView() {
-        super.loadView()
-        self.view = contentView
-        
-        let flowLayout = UICollectionViewFlowLayout()
-        flowLayout.scrollDirection = .vertical
 
-        self.postCollection = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
-        postCollection.backgroundColor = .white
-        postCollection.translatesAutoresizingMaskIntoConstraints = false
-        self.contentView.mainStack.addArrangedSubview(postCollection)
-        
-        NSLayoutConstraint.activate([
-            self.postCollection.leftAnchor.constraint(equalTo: self.contentView.leftAnchor),
-            self.postCollection.rightAnchor.constraint(equalTo: self.contentView.rightAnchor)
-        ])
-        
-        self.postCollection.register(BlogCell.self, forCellWithReuseIdentifier: "BlogCell")
-    }
-    
-    override func viewDidLoad() {
-        self.view = contentView
-        super.viewDidLoad()
-        
-        postCollection.rx
-            .setDelegate(self)
+        postCollection.rx.itemSelected
+            .subscribe(onNext:{ [weak self] indexPath in
+                
+              //  self?.postCollection.performBatchUpdates({}, completion: {_ in })
+            })
             .disposed(by: disposeBag)
+//            
+//        postCollection.rx
+//            .setDelegate(self)
+//            .disposed(by: disposeBag)
         
         viewModel.posts
             .drive(self.postCollection.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
-    }
-}
-
-extension BlogViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let isOn = self.selectedCellIndexPath[indexPath]?.isOn
-        let cell = self.selectedCellIndexPath[indexPath]?.cell
         
-        if isOn ?? false {
-            return cell?.cellIntrinsicContentSize ?? .zero
-        } else {
-            return CGSize(width: 400, height: 550)
-        }
+        self.postCollection.collectionViewLayout.invalidateLayout()
     }
 }
+//
+//extension BlogViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+////        guard let indexPaths = self.selectedCellIndexPath[indexPath] else { return
+////            CGSize(width: 400, height: 550)
+////        }
+////        let isOn = indexPaths.isOn
+////        let cell = indexPaths.cell
+////
+////        if isOn {
+////            return cell.cellIntrinsicContentSize ?? CGSize(width: 100, height: 100)
+////        } else {
+//            return CGSize(width: 400, height: 550)
+//        // }
+//    }
+//}
 
 extension UIViewController {
     func addChildViewController(_ childViewController: UIViewController) {

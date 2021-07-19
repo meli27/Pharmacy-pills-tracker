@@ -29,6 +29,7 @@ class ChatViewController: UIViewController {
                 return  ChatCell()
             }
            
+            // if sender es diferente al anterior se cambia el texto
             cell.chatText.text = message.text
       
             return cell
@@ -37,6 +38,11 @@ class ChatViewController: UIViewController {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
     override func loadView() {

@@ -19,8 +19,8 @@ class RegularUserPageViewController: UIPageViewController {
     private let blogViewController = BlogViewController()
     private let medicineViewController = MedicineViewController()
     private let chatViewController = ChatViewController()
-
-    //    private let infoViewController = InformationViewController()
+    private let productsViewController = ProductsViewController()
+    
     private var previousPage = 0
     
     weak var swipeDelegate: PageControllerDelegate?
@@ -38,7 +38,8 @@ class RegularUserPageViewController: UIPageViewController {
         medicineViewController.view.tag = 0
         blogViewController.view.tag = 1
         chatViewController.view.tag = 2
-        pages = [medicineViewController, blogViewController, chatViewController]
+        productsViewController.view.tag = 3
+        pages = [medicineViewController, blogViewController, chatViewController, productsViewController]
         //self.setViewControllers([pages[1]], direction: .forward, animated: true, completion: nil)
         self.setViewControllers([pages[0]], direction: .forward, animated: true, completion: nil)
     }

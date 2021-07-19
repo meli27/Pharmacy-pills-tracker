@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Medication: Codable{
+struct Medication: Codable {
     let id: Int?
     let presentation: String?
     let dose: String?

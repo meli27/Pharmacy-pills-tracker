@@ -51,19 +51,30 @@ class ChatView: UIView {
         collectionStack.translatesAutoresizingMaskIntoConstraints = false
         mainStack.addArrangedSubview(collectionStack)
         
-        message.backgroundColor = .lightGray
+        let messageStack = UIStackView()
+        messageStack.axis = .horizontal
+        messageStack.spacing = 16
+        messageStack.translatesAutoresizingMaskIntoConstraints = false
+        mainStack.addArrangedSubview(messageStack)
+        
+        message.backgroundColor = Color.messageGray
+        message.rightViewMode = .always
         message.clipsToBounds = true
         message.layer.cornerRadius = 5
-        message.placeholder = "Message ..."
+        message.placeholder = "Mensaje ..."
         message.translatesAutoresizingMaskIntoConstraints = false
-        mainStack.addArrangedSubview(message)
+        messageStack.addArrangedSubview(message)
         
-        mainStack.constrainToSafeEdges(to: self, padding: UIEdgeInsets(top: 16, left: 32, bottom: 16, right: 16))
+        let messageButton = UIButton()
+        messageButton.translatesAutoresizingMaskIntoConstraints = false
+        messageButton.setImage(R.image.send(), for: .normal)
+        messageStack.addArrangedSubview(messageButton)
+        
+        mainStack.constrainToSafeEdges(to: self, padding: UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16))
         
         NSLayoutConstraint.activate([
             title.leftAnchor.constraint(equalTo: self.mainStack.leftAnchor, constant: 8),
-            message.heightAnchor.constraint(equalToConstant: 100),
-            message.centerXAnchor.constraint(equalTo: self.centerXAnchor)
+            messageButton.heightAnchor.constraint(equalToConstant: 80)
         ])
     }
 }

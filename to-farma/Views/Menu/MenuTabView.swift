@@ -17,7 +17,7 @@ class RegularUserTabBar: UITabBar, PageControllerDelegate {
     private var blogItem: UITabBarItem!
     private var medicineItem: UITabBarItem!
     private var chatItem: UITabBarItem!
-  //  private var informationItem: UITabBarItem!
+    private var productsItem: UITabBarItem!
     
     weak var itemSelectedDelegate: RegularTabBarDelegate?
     let viewModel: RegularUserNavigationViewModel = RegularUserNavigationViewModel.shared
@@ -36,9 +36,9 @@ class RegularUserTabBar: UITabBar, PageControllerDelegate {
         medicineItem = UITabBarItem(title: R.string.localizable.medicamentos_titulo(), image: R.image.medicamentos(), tag: 0)
         blogItem = UITabBarItem(title: R.string.localizable.blog(), image: R.image.blog(), tag: 1)
         chatItem = UITabBarItem(title: R.string.localizable.chat_titulo(), image: R.image.buzon(), tag: 2)
+        productsItem = UITabBarItem(title: R.string.localizable.pedidos_titulo(), image: R.image.pedidos(), tag: 3)
 
-        //        informationItem = UITabBarItem(title: nil, image: R.image.iconRightTabBar(), tag: 2)
-        itemList = [medicineItem, blogItem, chatItem]
+        itemList = [medicineItem, blogItem, chatItem, productsItem]
         self.items = itemList
     }
     

@@ -45,7 +45,7 @@ class BlogView: UIView {
         rectangleYellow.translatesAutoresizingMaskIntoConstraints = false
         mainStack.addArrangedSubview(rectangleYellow)
         
-        mainStack.constrainToSafeEdges(to: self, padding: UIEdgeInsets(top: 16, left: 32, bottom: 16, right: 16))
+        mainStack.constrainToSafeEdges(to: self, padding: UIEdgeInsets(top: 16, left: 12, bottom: 16, right: 16))
         
         NSLayoutConstraint.activate([
             title.leftAnchor.constraint(equalTo: self.mainStack.leftAnchor, constant: 8)

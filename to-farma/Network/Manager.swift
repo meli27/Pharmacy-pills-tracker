@@ -45,6 +45,14 @@ class ToFarmaManager: ToFarmaProtocol {
     func fetchMessages() -> Observable<[Message]> {
         requestList(target: .userMessages)
     }
+    
+    func fetchCategories() -> Observable<[Category]> {
+        requestList(target: .usedCategories)
+    }
+    
+    func fetchProduct(category: String) -> Observable<[Productos]> {
+        requestList(target: .productsCategory(category: category))
+    }
 }
 
 private extension ToFarmaManager {

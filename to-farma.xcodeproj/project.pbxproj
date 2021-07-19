@@ -27,6 +27,8 @@
 		C21CD567268550C900B754B9 /* RegularUserPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21CD566268550C900B754B9 /* RegularUserPageViewController.swift */; };
 		C21CD5692685549300B754B9 /* RegularUserNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21CD5682685549300B754B9 /* RegularUserNavigationViewController.swift */; };
 		C21FB9DE26818BC900A17CA8 /* ImageUnderline.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21FB9DD26818BC900A17CA8 /* ImageUnderline.swift */; };
+		C221497626A4FD48006D2918 /* UITableView+Binder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C221497526A4FD48006D2918 /* UITableView+Binder.swift */; };
+		C221497826A4FD71006D2918 /* UITableView+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C221497726A4FD71006D2918 /* UITableView+Utilities.swift */; };
 		C22AA607267068B5001B5FA0 /* LogSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22AA606267068B5001B5FA0 /* LogSessionView.swift */; };
 		C22AA609267068CB001B5FA0 /* LogSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22AA608267068CB001B5FA0 /* LogSessionViewController.swift */; };
 		C22AA60B26706921001B5FA0 /* LogSessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22AA60A26706921001B5FA0 /* LogSessionModel.swift */; };
@@ -50,6 +52,16 @@
 		C26824192671C38000EE9429 /* BlogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26824162671C38000EE9429 /* BlogViewModel.swift */; };
 		C268241A2671C38000EE9429 /* BlogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26824172671C38000EE9429 /* BlogView.swift */; };
 		C268241B2671C38000EE9429 /* BlogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26824182671C38000EE9429 /* BlogViewController.swift */; };
+		C272F18926A367F9007D0EA8 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C272F18826A367F9007D0EA8 /* ProductsViewController.swift */; };
+		C272F18B26A36803007D0EA8 /* ProductsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C272F18A26A36803007D0EA8 /* ProductsView.swift */; };
+		C272F18D26A3680C007D0EA8 /* ProductsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C272F18C26A3680C007D0EA8 /* ProductsViewModel.swift */; };
+		C272F19026A36CE3007D0EA8 /* DropdownPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C272F18F26A36CE3007D0EA8 /* DropdownPickerViewModel.swift */; };
+		C272F19326A36CF8007D0EA8 /* DropdownPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C272F19226A36CF8007D0EA8 /* DropdownPickerView.swift */; };
+		C272F19526A37439007D0EA8 /* PedidosCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C272F19426A37439007D0EA8 /* PedidosCell.swift */; };
+		C272F19726A3789D007D0EA8 /* Productos.swift in Sources */ = {isa = PBXBuildFile; fileRef = C272F19626A3789D007D0EA8 /* Productos.swift */; };
+		C272F19926A37A53007D0EA8 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = C272F19826A37A53007D0EA8 /* Category.swift */; };
+		C272F19C26A38C01007D0EA8 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C272F19B26A38C01007D0EA8 /* SearchBarView.swift */; };
+		C272F19E26A38C0B007D0EA8 /* SearchBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C272F19D26A38C0B007D0EA8 /* SearchBarViewModel.swift */; };
 		C2737E9A267E5C0400AB6D25 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2737E99267E5C0400AB6D25 /* UserSession.swift */; };
 		C2737E9D267ECCB600AB6D25 /* MedicesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2737E9C267ECCB600AB6D25 /* MedicesViewModel.swift */; };
 		C2737E9F267ECCBE00AB6D25 /* MedicinesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2737E9E267ECCBE00AB6D25 /* MedicinesView.swift */; };
@@ -120,6 +132,8 @@
 		C21CD566268550C900B754B9 /* RegularUserPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularUserPageViewController.swift; sourceTree = "<group>"; };
 		C21CD5682685549300B754B9 /* RegularUserNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularUserNavigationViewController.swift; sourceTree = "<group>"; };
 		C21FB9DD26818BC900A17CA8 /* ImageUnderline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUnderline.swift; sourceTree = "<group>"; };
+		C221497526A4FD48006D2918 /* UITableView+Binder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Binder.swift"; sourceTree = "<group>"; };
+		C221497726A4FD71006D2918 /* UITableView+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Utilities.swift"; sourceTree = "<group>"; };
 		C22AA606267068B5001B5FA0 /* LogSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogSessionView.swift; sourceTree = "<group>"; };
 		C22AA608267068CB001B5FA0 /* LogSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogSessionViewController.swift; sourceTree = "<group>"; };
 		C22AA60A26706921001B5FA0 /* LogSessionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogSessionModel.swift; sourceTree = "<group>"; };
@@ -144,6 +158,16 @@
 		C26824162671C38000EE9429 /* BlogViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogViewModel.swift; sourceTree = "<group>"; };
 		C26824172671C38000EE9429 /* BlogView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogView.swift; sourceTree = "<group>"; };
 		C26824182671C38000EE9429 /* BlogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogViewController.swift; sourceTree = "<group>"; };
+		C272F18826A367F9007D0EA8 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
+		C272F18A26A36803007D0EA8 /* ProductsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsView.swift; sourceTree = "<group>"; };
+		C272F18C26A3680C007D0EA8 /* ProductsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewModel.swift; sourceTree = "<group>"; };
+		C272F18F26A36CE3007D0EA8 /* DropdownPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownPickerViewModel.swift; sourceTree = "<group>"; };
+		C272F19226A36CF8007D0EA8 /* DropdownPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownPickerView.swift; sourceTree = "<group>"; };
+		C272F19426A37439007D0EA8 /* PedidosCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PedidosCell.swift; sourceTree = "<group>"; };
+		C272F19626A3789D007D0EA8 /* Productos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Productos.swift; sourceTree = "<group>"; };
+		C272F19826A37A53007D0EA8 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		C272F19B26A38C01007D0EA8 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		C272F19D26A38C0B007D0EA8 /* SearchBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarViewModel.swift; sourceTree = "<group>"; };
 		C2737E99267E5C0400AB6D25 /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
 		C2737E9C267ECCB600AB6D25 /* MedicesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicesViewModel.swift; sourceTree = "<group>"; };
 		C2737E9E267ECCBE00AB6D25 /* MedicinesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicinesView.swift; sourceTree = "<group>"; };
@@ -307,6 +331,8 @@
 		C21447052668893F0088B4F9 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				C272F19A26A38BF4007D0EA8 /* Search */,
+				C272F18E26A36CD2007D0EA8 /* Dropdown */,
 				C2144706266889580088B4F9 /* RectangleView.swift */,
 				C25F2D622675451000FDEB75 /* String+HTML.swift */,
 			);
@@ -327,6 +353,7 @@
 		C2337172265AF97000144C90 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C272F18726A367E7007D0EA8 /* Products */,
 				C2115215269A5B460059E6BE /* Chat */,
 				C21CD561268546BA00B754B9 /* Menu */,
 				C2737E9B267ECC8400AB6D25 /* Medicamentos */,
@@ -348,6 +375,8 @@
 				C28D0A1826891A0900A45F5F /* Medicine.swift */,
 				C28D0A1A26891B8700A45F5F /* Medication.swift */,
 				C211521E269A60560059E6BE /* Message.swift */,
+				C272F19626A3789D007D0EA8 /* Productos.swift */,
+				C272F19826A37A53007D0EA8 /* Category.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -407,6 +436,35 @@
 			path = Blog;
 			sourceTree = "<group>";
 		};
+		C272F18726A367E7007D0EA8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C272F18826A367F9007D0EA8 /* ProductsViewController.swift */,
+				C272F18A26A36803007D0EA8 /* ProductsView.swift */,
+				C272F18C26A3680C007D0EA8 /* ProductsViewModel.swift */,
+				C272F19426A37439007D0EA8 /* PedidosCell.swift */,
+			);
+			path = Products;
+			sourceTree = "<group>";
+		};
+		C272F18E26A36CD2007D0EA8 /* Dropdown */ = {
+			isa = PBXGroup;
+			children = (
+				C272F18F26A36CE3007D0EA8 /* DropdownPickerViewModel.swift */,
+				C272F19226A36CF8007D0EA8 /* DropdownPickerView.swift */,
+			);
+			path = Dropdown;
+			sourceTree = "<group>";
+		};
+		C272F19A26A38BF4007D0EA8 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				C272F19B26A38C01007D0EA8 /* SearchBarView.swift */,
+				C272F19D26A38C0B007D0EA8 /* SearchBarViewModel.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		C2737E9B267ECC8400AB6D25 /* Medicamentos */ = {
 			isa = PBXGroup;
 			children = (
@@ -444,6 +502,8 @@
 				C25F2D9E2675CE0700FDEB75 /* Typography.swift */,
 				C21FB9DD26818BC900A17CA8 /* ImageUnderline.swift */,
 				C2D6265E268ABF4A00DC965D /* HTMLToString.swift */,
+				C221497526A4FD48006D2918 /* UITableView+Binder.swift */,
+				C221497726A4FD71006D2918 /* UITableView+Utilities.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -716,10 +776,13 @@
 				C2115217269A5B8B0059E6BE /* ChatView.swift in Sources */,
 				C21CD5632685482300B754B9 /* MenuTabView.swift in Sources */,
 				C268241B2671C38000EE9429 /* BlogViewController.swift in Sources */,
+				C272F19526A37439007D0EA8 /* PedidosCell.swift in Sources */,
 				C22AA60F26707ED9001B5FA0 /* SharedSequenceConvertibleType+Utilities.swift in Sources */,
 				C211521F269A60560059E6BE /* Message.swift in Sources */,
+				C272F19926A37A53007D0EA8 /* Category.swift in Sources */,
 				C28D0A1926891A0900A45F5F /* Medicine.swift in Sources */,
 				C2E6705A2665E5080048647A /* ScaleImage.swift in Sources */,
+				C221497826A4FD71006D2918 /* UITableView+Utilities.swift in Sources */,
 				C2337177265AFC0300144C90 /* Manager.swift in Sources */,
 				C20B6A99265850E200F93216 /* AppDelegate.swift in Sources */,
 				C2E6705C2665EDFB0048647A /* Buttons.swift in Sources */,
@@ -731,6 +794,7 @@
 				C26824192671C38000EE9429 /* BlogViewModel.swift in Sources */,
 				C211521D269A5E5A0059E6BE /* ChatCell.swift in Sources */,
 				C2105762268FE73A007FDD74 /* MedicineModalView.swift in Sources */,
+				C272F18D26A3680C007D0EA8 /* ProductsViewModel.swift in Sources */,
 				C233717D265B13BE00144C90 /* User.swift in Sources */,
 				C28299A72669E752007FE2B6 /* RegisterViewController.swift in Sources */,
 				C22AA60D267071EF001B5FA0 /* UIViewController+Navigation.swift in Sources */,
@@ -738,9 +802,15 @@
 				C2D6265F268ABF4A00DC965D /* HTMLToString.swift in Sources */,
 				C2337187265B1C8A00144C90 /* LogInViewController.swift in Sources */,
 				C25F2DAB2675D72400FDEB75 /* R.generated.swift in Sources */,
+				C272F19026A36CE3007D0EA8 /* DropdownPickerViewModel.swift in Sources */,
+				C272F19C26A38C01007D0EA8 /* SearchBarView.swift in Sources */,
+				C272F19726A3789D007D0EA8 /* Productos.swift in Sources */,
+				C272F18926A367F9007D0EA8 /* ProductsViewController.swift in Sources */,
 				C2737E9F267ECCBE00AB6D25 /* MedicinesView.swift in Sources */,
 				C22AA60B26706921001B5FA0 /* LogSessionModel.swift in Sources */,
 				C2E670582665DAE80048647A /* Color.swift in Sources */,
+				C272F19E26A38C0B007D0EA8 /* SearchBarViewModel.swift in Sources */,
+				C221497626A4FD48006D2918 /* UITableView+Binder.swift in Sources */,
 				C2337184265B18C300144C90 /* UserDefaultManager.swift in Sources */,
 				C2337182265B16C700144C90 /* Environment.swift in Sources */,
 				C2737E9A267E5C0400AB6D25 /* UserSession.swift in Sources */,
@@ -748,9 +818,11 @@
 				C28299A92669E75D007FE2B6 /* RegisterViewModel.swift in Sources */,
 				C28D0A1D26891EA700A45F5F /* MedicinesCell.swift in Sources */,
 				C2144707266889580088B4F9 /* RectangleView.swift in Sources */,
+				C272F19326A36CF8007D0EA8 /* DropdownPickerView.swift in Sources */,
 				C211521B269A5C1D0059E6BE /* ChatViewModel.swift in Sources */,
 				C21FB9DE26818BC900A17CA8 /* ImageUnderline.swift in Sources */,
 				C20B6ACD2658519200F93216 /* ToFarmaAPI.swift in Sources */,
+				C272F18B26A36803007D0EA8 /* ProductsView.swift in Sources */,
 				C28D0A1B26891B8700A45F5F /* Medication.swift in Sources */,
 				C21CD5692685549300B754B9 /* RegularUserNavigationViewController.swift in Sources */,
 				C21CD56526854F5500B754B9 /* RegularUserNavigationViewModel.swift in Sources */,
