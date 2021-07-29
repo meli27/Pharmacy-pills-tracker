@@ -11,7 +11,7 @@ struct Medication: Codable {
     let id: Int?
     let presentation: String?
     let dose: String?
-    let takeTime: String?
+    let takeTime: Date?
     let medicine_id: Int?
     let patient_id: Int?
     let created_at: String?
@@ -19,7 +19,7 @@ struct Medication: Codable {
     let medicine: Medicine?
     let timeRow: Bool
     
-    init(dose: String, takeTime: String?, medicine: Medicine?) {
+    init(dose: String, takeTime: Date?, medicine: Medicine?) {
         self.dose = dose
         self.takeTime = takeTime
         self.medicine = medicine
@@ -32,7 +32,7 @@ struct Medication: Codable {
         self.timeRow = false
     }
     
-    init(takeTime: String?, timeRow: Bool) {
+    init(takeTime: Date?, timeRow: Bool) {
         self.dose = ""
         self.takeTime = takeTime
         self.timeRow = timeRow

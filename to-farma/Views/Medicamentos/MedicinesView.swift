@@ -15,7 +15,8 @@ class MedicineView: UIView {
     let title = UILabel()
     let registerButton = UIButton()
     var mainStack = UIStackView()
- 
+    let nextVisit = UILabel()
+
     override init(frame: CGRect) {
         super.init(frame: .zero)
         self.prepareLayout()
@@ -44,6 +45,16 @@ class MedicineView: UIView {
         rectangleYellow.translatesAutoresizingMaskIntoConstraints = false
         mainStack.addArrangedSubview(rectangleYellow)
         
+        let nextVisitLabel = UILabel()
+        nextVisitLabel.text = "Próxima visita"
+        nextVisitLabel.font = UIFont.boldSystemFont(ofSize: 26)
+        nextVisitLabel.translatesAutoresizingMaskIntoConstraints = false
+        mainStack.addArrangedSubview(nextVisitLabel)
+        
+        nextVisit.font = UIFont.boldSystemFont(ofSize: 18)
+        nextVisit.translatesAutoresizingMaskIntoConstraints = false
+        mainStack.addArrangedSubview(nextVisit)
+      
         mainStack.constrainEdges(to: self, padding: UIEdgeInsets(top: 16, left: 0, bottom: 16, right: 0))
         
         NSLayoutConstraint.activate([

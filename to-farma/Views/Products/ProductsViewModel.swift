@@ -12,17 +12,25 @@ import RxDataSources
 
 typealias SectionOfProducts = SectionModel<String, Productos>
 
+enum ProductsOrder {
+    case increase
+    case decrease
+}
+
+struct ProductInfo {
+    let action: ProductsOrder
+    let number: Int
+}
+
 class ProductsViewModel{
     //Input
     let selectedCategory = PublishRelay<Int>()
-    let minusTapped = PublishRelay<Productos>()
-    let plusTapped = PublishRelay<Productos>()
+    let productBuyed = PublishRelay<(index: IndexPath, actions: ProductsOrder)>()
 
     //Output
     let products: Driver<[SectionOfProducts]>
     let categories: Driver<[Category]>
-    let minusProduct: Driver<Productos>
-    let plusProduct: Driver<Productos>
+    let productsBuyed: Driver<[IndexPath:Int]>
 
     static let postsSectionModel = "PostSectionModel"
 
@@ -38,7 +46,35 @@ class ProductsViewModel{
             }
             .asDriver(onErrorDriveWith: .empty())
         
-        minusProduct = minusTapped.asDriver(onErrorDriveWith: .empty())
-        plusProduct = plusTapped.asDriver(onErrorDriveWith: .empty())
+        self.productsBuyed = productBuyed
+            .scan([:]) { list, product in
+                var item = list
+
+                switch product.actions {
+                case .increase:
+                    if var increaseProduct = list[product.index] {
+                        increaseProduct += 1
+                        item[product.index] = increaseProduct
+                        return item
+                    } else {
+                        item[product.index] = 1
+                        return item
+                    }
+                case .decrease:
+                    if var decreaseProduct = list[product.index] {
+                        if decreaseProduct > 0 {
+                            decreaseProduct -= 1
+                        } else {
+                            decreaseProduct = 0
+                        }
+                        item[product.index] = decreaseProduct
+                        return item
+                    } else {
+                        item[product.index] = 0
+                        return item
+                    }
+                }
+            }
+            .asDriver(onErrorDriveWith: .empty())
     }
 }

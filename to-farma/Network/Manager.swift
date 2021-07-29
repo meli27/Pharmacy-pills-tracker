@@ -34,7 +34,7 @@ class ToFarmaManager: ToFarmaProtocol {
         request(target: .user)
     }
     
-    func fetchTodayMedication() -> Observable<[String: [Medication]]> {
+    func fetchTodayMedication() -> Observable<[Date : [Medication]]> {
         requestMedicines(target: .patientTodayMedication)
     }
     
@@ -52,6 +52,10 @@ class ToFarmaManager: ToFarmaProtocol {
     
     func fetchProduct(category: String) -> Observable<[Productos]> {
         requestList(target: .productsCategory(category: category))
+    }
+    
+    func fetchNextVisit() -> Observable<Visit> {
+        request(target: .patientNextVisit)
     }
 }
 
@@ -76,23 +80,26 @@ private extension ToFarmaManager {
         }
     }
     
-    private func requestMedicines(target: ToFarmaAPI) -> Observable<[String: [Medication]]> {
-        return Observable<[String: [Medication]]>.create { observer in
+    private func requestMedicines(target: ToFarmaAPI) -> Observable<[Date : [Medication]]> {
+        return Observable<[Date : [Medication]]>.create { observer in
             self.provider.request(target) { result in
                 switch result {
                 case .success(let response):
 
                     do {
                         let dictionary = try JSONSerialization.jsonObject(with: response.data, options: .allowFragments) as! NSDictionary
-                        var medicationsTime: [String: [Medication]] = [:]
+                        var medicationsTime: [Date: [Medication]] = [:]
 
                         for key in dictionary.allKeys {
                             var medications: [Medication] = []
                             let values = dictionary.object(forKey: key) as! NSArray
+                            
+                            let dateFormatter = DateFormatter()
+                            dateFormatter.dateFormat = "h:mm a"
+                            let date = dateFormatter.date(from: key as! String)!
 
                             var medicineObject: Medicine!
-                            print("values")
-                            print(values)
+                          
                             for value in values {
                                 let dose = (value as AnyObject).object(forKey: "dose") as! String
                                 let medicines = (value as AnyObject).object(forKey: "medicine") as! NSDictionary
@@ -106,9 +113,9 @@ private extension ToFarmaManager {
                                 let dataSheet = (medicines as AnyObject).object(forKey: "data_sheet") as? String
                                 medicineObject = Medicine(id: id, logo: logo, name: name, measurementUnits: measurementUnits, presentation: presentation, quantity: quantity, dataSheet: dataSheet)
                 
-                                let medication = Medication(dose: dose, takeTime: key as? String, medicine: medicineObject)
+                                let medication = Medication(dose: dose, takeTime: date, medicine: medicineObject)
                                 medications.append(medication)
-                                medicationsTime[key as! String] = medications
+                                medicationsTime[date] = medications
                             }
                             observer.onNext(medicationsTime)
                         }

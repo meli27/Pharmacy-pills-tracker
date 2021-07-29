@@ -30,22 +30,40 @@ class ProductsViewController: UIViewController {
                     return PedidosCell()
                 }
                 
-                cell.priceLabel.rx.tapGesture()
-                    .when(.recognized)
-                    .asDriver(onErrorDriveWith: .empty())
-                    .map { _ in product }
-                    .debug("aaa", trimOutput: false)
-                    .drive(self.viewModel.minusTapped)
+                self.viewModel.productsBuyed
+                    .map {
+                        if let product = $0[indexPath] {
+                            product > 0 ? cell.updateActive(isHidden: false, number: String(product))
+                            : cell.updateActive(isHidden: true, number: nil)
+                            return String(product)
+                        } else {
+                            cell.updateActive(isHidden: true, number: nil)
+                            return nil
+                        }
+                    }
+                    .drive(cell.pedidosImage.productNumber)
                     .disposed(by: cell.disposeBag)
                 
                 cell.plus.rx.tap
                     .asDriver(onErrorDriveWith: .empty())
-                    .map { _ in product }
-                    .drive(self.viewModel.plusTapped)
+                    .do(onNext: {
+                        cell.pedidosImage.deleteIcon.isHidden = false
+                    })
+                    .map { _ in (index: indexPath, actions: .increase) }
+                    .drive(self.viewModel.productBuyed)
+                    .disposed(by: cell.disposeBag)
+                
+                cell.minus.rx.tap
+                    .asDriver(onErrorDriveWith: .empty())
+                    .do(onNext: {
+                        cell.pedidosImage.deleteIcon.isHidden = true
+                    })
+                    .map { _ in (index: indexPath, actions: .decrease) }
+                    .drive(self.viewModel.productBuyed)
                     .disposed(by: cell.disposeBag)
                 
                 let productLogo = "https://app.tofarma.com/storage/"+(product.logo ?? "")
-                cell.pedidosImage.imageFromServerURL(productLogo, placeHolder: cell.pedidosImage.image)
+                cell.pedidosImage.imageView.imageFromServerURL(productLogo, placeHolder: cell.pedidosImage.imageView.image)
 
                 cell.titleLabel.text = product.name
                 cell.priceLabel.text = "₡" + String(product.price ?? 0)
@@ -65,7 +83,6 @@ class ProductsViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
     override func viewDidLoad() {
@@ -120,20 +137,12 @@ class ProductsViewController: UIViewController {
             .compactMap { $0.first?.id }
             .drive(self.viewModel.selectedCategory)
             .disposed(by: disposeBag)
-        
-        viewModel.minusProduct
-            .drive(onNext: {
-                print("minus")
-                print($0.name)
-            })
+    
+        viewModel.productsBuyed
+            .debug("ingo", trimOutput: false)
+            .drive()
             .disposed(by: disposeBag)
         
-        viewModel.plusProduct
-            .drive(onNext: {
-                print("plus")
-                print($0.name)
-            })
-            .disposed(by: disposeBag)
     }
 }
 
@@ -142,4 +151,14 @@ extension ProductsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
     }
+    
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        guard let cell = tableView.dequeueReusableCell(withIdentifier:
+//            "PedidosCell", for: indexPath) as? PedidosCell
+//        else {
+//            return PedidosCell()
+//        }
+//
+//        if
+//    }
 }

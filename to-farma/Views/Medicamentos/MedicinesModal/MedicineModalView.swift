@@ -23,7 +23,6 @@ class MedicineModalView: UIView {
     }
     
     private func prepareLayout() {
-        //Hacer un view para el header y otro para la foto
         let mainStack = UIStackView()
         mainStack.translatesAutoresizingMaskIntoConstraints = false
         mainStack.axis = .vertical

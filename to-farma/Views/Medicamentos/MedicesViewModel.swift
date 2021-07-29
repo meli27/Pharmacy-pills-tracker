@@ -31,19 +31,34 @@ class MedicineViewModel{
     //Output
     var medications: Driver<[MedicationSection]>
     let dataSheet: Driver<(title: String?, dataSheet: String?)>
+    let nextVisit: Driver<String>
     
     static let medicineSectionModel = "MedicineSectionModel"
 
     init(networkManager: ToFarmaManager = ToFarmaManager()) {
-        self.medications = networkManager.fetchTodayMedication()
+    
+        let medicationList = networkManager.fetchTodayMedication()
             .asDriver(onErrorDriveWith: .empty())
-            .debug("datos", trimOutput: false)
+            .compactMap { medicationTime -> [Dictionary<Date, [Medication]>.Element] in
+                return medicationTime.sorted { $0.key.compare($1.key) == .orderedAscending }
+            }
+        
+        nextVisit = networkManager.fetchNextVisit()
+            .map { $0.date }
+            .asDriver(onErrorDriveWith: .empty())
+        
+        self.medications = medicationList
             .map { medicationTime -> [MedicationSection] in
+                
                 var sections: [MedicationSection] = []
                 
-                medicationTime.keys.forEach { key in
-                    guard let medication = medicationTime[key] else { return }
-                    let section = MedicationSection(header: key, items: medication)
+                medicationTime.forEach { key, value in
+                    let dateFormatter = DateFormatter()
+                    dateFormatter.dateFormat = "h:mm a"
+
+                    let dateString = dateFormatter.string(from: key)
+
+                    let section = MedicationSection(header: dateString, items: value)
                     sections.append(section)
                 }
                 return sections

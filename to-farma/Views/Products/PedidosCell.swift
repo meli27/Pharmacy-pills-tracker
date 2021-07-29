@@ -11,7 +11,7 @@ import RxCocoa
 import RxSwift
 
 class PedidosCell: UITableViewCell {
-    var pedidosImage = UIImageView()
+    var pedidosImage = UIImageComponent()
     var titleLabel = UILabel()
     var priceLabel = UILabel()
     var plus = UIButton()
@@ -21,6 +21,7 @@ class PedidosCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setLayouts()
+        //prepareForReuse()
     }
     
     required init?(coder: NSCoder) {
@@ -30,6 +31,11 @@ class PedidosCell: UITableViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         disposeBag = DisposeBag()
+    }
+    
+    public func updateActive(isHidden: Bool, number: String?) {
+        pedidosImage.productNumberLabel.text = number
+        pedidosImage.deleteIcon.isHidden = isHidden
     }
     
     private func setLayouts() {
@@ -43,7 +49,7 @@ class PedidosCell: UITableViewCell {
 
         pedidosStack.constrainToSafeEdges(to: self, padding: UIEdgeInsets(top: 16, left: 16, bottom: 24, right: 16))
         
-        pedidosImage.image = R.image.user()
+        pedidosImage = UIImageComponent()
         pedidosImage.translatesAutoresizingMaskIntoConstraints = false
         pedidosImage.contentMode = .scaleAspectFit
         pedidosStack.addArrangedSubview(pedidosImage)

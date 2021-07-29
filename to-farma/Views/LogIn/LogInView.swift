@@ -72,7 +72,8 @@ class LogInView: UIView {
         NSLayoutConstraint.activate([
             toFarmaLogo.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             buttonViewStack.leftAnchor.constraint(equalTo: mainStack.leftAnchor, constant: 16),
-            buttonViewStack.rightAnchor.constraint(equalTo: mainStack.rightAnchor, constant: -16)
+            buttonViewStack.rightAnchor.constraint(equalTo: mainStack.rightAnchor, constant: -16),
+            rectangleYellow.rightAnchor.constraint(equalTo: mainStack.rightAnchor)
         ])
     }
 }

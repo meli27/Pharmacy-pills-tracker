@@ -53,7 +53,6 @@ class MedicineViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
     required init?(coder: NSCoder) {
@@ -79,6 +78,10 @@ class MedicineViewController: UIViewController {
 
         viewModel.medications
             .drive(self.medicineTableView.rx.items(dataSource: dataSource))
+            .disposed(by: disposeBag)
+        
+        viewModel.nextVisit
+            .drive(contentView.nextVisit.rx.text)
             .disposed(by: disposeBag)
         
         viewModel.dataSheet

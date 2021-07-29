@@ -48,7 +48,6 @@ class RegularUserTabBar: UITabBar, PageControllerDelegate {
         self.tintColor = .darkGray
         self.unselectedItemTintColor = .lightGray
         self.selectedItem = itemList[0]
-       // self.selectionIndicatorImage = UIImage().setupTabBarItemUnderline(color: .black, size: CGSize(width: CGFloat(UIScreen.main.bounds.width)/3, height: 49), lineSize: CGSize(width: CGFloat(UIScreen.main.bounds.width)/3, height: 4))
     }
     
     func pageDidSwipe(toIndex: Int) {

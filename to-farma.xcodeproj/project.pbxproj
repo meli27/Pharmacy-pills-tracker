@@ -29,6 +29,12 @@
 		C21FB9DE26818BC900A17CA8 /* ImageUnderline.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21FB9DD26818BC900A17CA8 /* ImageUnderline.swift */; };
 		C221497626A4FD48006D2918 /* UITableView+Binder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C221497526A4FD48006D2918 /* UITableView+Binder.swift */; };
 		C221497826A4FD71006D2918 /* UITableView+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C221497726A4FD71006D2918 /* UITableView+Utilities.swift */; };
+		C2238CA126B25F60003B27C8 /* HeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2238CA026B25F60003B27C8 /* HeaderViewModel.swift */; };
+		C2238CA326B25F69003B27C8 /* HeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2238CA226B25F69003B27C8 /* HeaderViewController.swift */; };
+		C2238CA526B25F79003B27C8 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2238CA426B25F79003B27C8 /* HeaderView.swift */; };
+		C2238CA726B26B43003B27C8 /* Controller+aux.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2238CA626B26B43003B27C8 /* Controller+aux.swift */; };
+		C228973526A8FFF5005EB152 /* Visit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C228973426A8FFF5005EB152 /* Visit.swift */; };
+		C228973726A90485005EB152 /* PedidosImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C228973626A90485005EB152 /* PedidosImageView.swift */; };
 		C22AA607267068B5001B5FA0 /* LogSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22AA606267068B5001B5FA0 /* LogSessionView.swift */; };
 		C22AA609267068CB001B5FA0 /* LogSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22AA608267068CB001B5FA0 /* LogSessionViewController.swift */; };
 		C22AA60B26706921001B5FA0 /* LogSessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22AA60A26706921001B5FA0 /* LogSessionModel.swift */; };
@@ -134,6 +140,12 @@
 		C21FB9DD26818BC900A17CA8 /* ImageUnderline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUnderline.swift; sourceTree = "<group>"; };
 		C221497526A4FD48006D2918 /* UITableView+Binder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Binder.swift"; sourceTree = "<group>"; };
 		C221497726A4FD71006D2918 /* UITableView+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Utilities.swift"; sourceTree = "<group>"; };
+		C2238CA026B25F60003B27C8 /* HeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewModel.swift; sourceTree = "<group>"; };
+		C2238CA226B25F69003B27C8 /* HeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewController.swift; sourceTree = "<group>"; };
+		C2238CA426B25F79003B27C8 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		C2238CA626B26B43003B27C8 /* Controller+aux.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Controller+aux.swift"; sourceTree = "<group>"; };
+		C228973426A8FFF5005EB152 /* Visit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visit.swift; sourceTree = "<group>"; };
+		C228973626A90485005EB152 /* PedidosImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PedidosImageView.swift; sourceTree = "<group>"; };
 		C22AA606267068B5001B5FA0 /* LogSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogSessionView.swift; sourceTree = "<group>"; };
 		C22AA608267068CB001B5FA0 /* LogSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogSessionViewController.swift; sourceTree = "<group>"; };
 		C22AA60A26706921001B5FA0 /* LogSessionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogSessionModel.swift; sourceTree = "<group>"; };
@@ -350,9 +362,20 @@
 			path = Menu;
 			sourceTree = "<group>";
 		};
+		C2238C9F26B25EDA003B27C8 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				C2238CA026B25F60003B27C8 /* HeaderViewModel.swift */,
+				C2238CA226B25F69003B27C8 /* HeaderViewController.swift */,
+				C2238CA426B25F79003B27C8 /* HeaderView.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
 		C2337172265AF97000144C90 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C2238C9F26B25EDA003B27C8 /* Header */,
 				C272F18726A367E7007D0EA8 /* Products */,
 				C2115215269A5B460059E6BE /* Chat */,
 				C21CD561268546BA00B754B9 /* Menu */,
@@ -377,6 +400,7 @@
 				C211521E269A60560059E6BE /* Message.swift */,
 				C272F19626A3789D007D0EA8 /* Productos.swift */,
 				C272F19826A37A53007D0EA8 /* Category.swift */,
+				C228973426A8FFF5005EB152 /* Visit.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -443,6 +467,7 @@
 				C272F18A26A36803007D0EA8 /* ProductsView.swift */,
 				C272F18C26A3680C007D0EA8 /* ProductsViewModel.swift */,
 				C272F19426A37439007D0EA8 /* PedidosCell.swift */,
+				C228973626A90485005EB152 /* PedidosImageView.swift */,
 			);
 			path = Products;
 			sourceTree = "<group>";
@@ -504,6 +529,7 @@
 				C2D6265E268ABF4A00DC965D /* HTMLToString.swift */,
 				C221497526A4FD48006D2918 /* UITableView+Binder.swift */,
 				C221497726A4FD71006D2918 /* UITableView+Utilities.swift */,
+				C2238CA626B26B43003B27C8 /* Controller+aux.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -776,6 +802,7 @@
 				C2115217269A5B8B0059E6BE /* ChatView.swift in Sources */,
 				C21CD5632685482300B754B9 /* MenuTabView.swift in Sources */,
 				C268241B2671C38000EE9429 /* BlogViewController.swift in Sources */,
+				C2238CA126B25F60003B27C8 /* HeaderViewModel.swift in Sources */,
 				C272F19526A37439007D0EA8 /* PedidosCell.swift in Sources */,
 				C22AA60F26707ED9001B5FA0 /* SharedSequenceConvertibleType+Utilities.swift in Sources */,
 				C211521F269A60560059E6BE /* Message.swift in Sources */,
@@ -791,7 +818,9 @@
 				C2D050362674589E004FC518 /* BlogCell.swift in Sources */,
 				C28299A52669E744007FE2B6 /* RegisterView.swift in Sources */,
 				C2337175265AF98900144C90 /* Blog.swift in Sources */,
+				C2238CA726B26B43003B27C8 /* Controller+aux.swift in Sources */,
 				C26824192671C38000EE9429 /* BlogViewModel.swift in Sources */,
+				C2238CA326B25F69003B27C8 /* HeaderViewController.swift in Sources */,
 				C211521D269A5E5A0059E6BE /* ChatCell.swift in Sources */,
 				C2105762268FE73A007FDD74 /* MedicineModalView.swift in Sources */,
 				C272F18D26A3680C007D0EA8 /* ProductsViewModel.swift in Sources */,
@@ -811,6 +840,7 @@
 				C2E670582665DAE80048647A /* Color.swift in Sources */,
 				C272F19E26A38C0B007D0EA8 /* SearchBarViewModel.swift in Sources */,
 				C221497626A4FD48006D2918 /* UITableView+Binder.swift in Sources */,
+				C228973726A90485005EB152 /* PedidosImageView.swift in Sources */,
 				C2337184265B18C300144C90 /* UserDefaultManager.swift in Sources */,
 				C2337182265B16C700144C90 /* Environment.swift in Sources */,
 				C2737E9A267E5C0400AB6D25 /* UserSession.swift in Sources */,
@@ -821,6 +851,7 @@
 				C272F19326A36CF8007D0EA8 /* DropdownPickerView.swift in Sources */,
 				C211521B269A5C1D0059E6BE /* ChatViewModel.swift in Sources */,
 				C21FB9DE26818BC900A17CA8 /* ImageUnderline.swift in Sources */,
+				C228973526A8FFF5005EB152 /* Visit.swift in Sources */,
 				C20B6ACD2658519200F93216 /* ToFarmaAPI.swift in Sources */,
 				C272F18B26A36803007D0EA8 /* ProductsView.swift in Sources */,
 				C28D0A1B26891B8700A45F5F /* Medication.swift in Sources */,
@@ -831,6 +862,7 @@
 				C2737EA1267ECCD100AB6D25 /* MedicinesViewController.swift in Sources */,
 				C233717F265B150100144C90 /* Role.swift in Sources */,
 				C25F2D9F2675CE0700FDEB75 /* Typography.swift in Sources */,
+				C2238CA526B25F79003B27C8 /* HeaderView.swift in Sources */,
 				C2E6705E2665F75D0048647A /* UIView+ContainerViewConstraints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

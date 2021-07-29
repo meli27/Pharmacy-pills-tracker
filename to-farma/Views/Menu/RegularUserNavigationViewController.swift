@@ -23,15 +23,11 @@ class RegularUserNavigationViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(true, animated: animated)
-    }
-    
     override func loadView() {
         super.loadView()
         self.setupLayout()
         self.setupDelegates()
+        self.setupRegularUserNavigationBar(R.image.toFarmaLogo2()!)
     }
 
     private func setupDelegates() {
@@ -66,5 +62,6 @@ class RegularUserNavigationViewController: UIViewController {
             pageViewController.view.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor),
             pageViewController.view.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor)
         ])
+
     }
 }

@@ -26,7 +26,6 @@ class BlogViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
     required init?(coder: NSCoder) {
@@ -39,9 +38,7 @@ class BlogViewController: UIViewController {
         
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .vertical
-        //flowLayout.estimatedItemSize = CGSize(width: 400, height: 550)
-        flowLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
-
+        
         self.postCollection = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
         postCollection.backgroundColor = .white
         postCollection.translatesAutoresizingMaskIntoConstraints = false
@@ -80,24 +77,24 @@ class BlogViewController: UIViewController {
                 .flatMapLatest { _ in cell.switchMore.rx.isOn }
                 .asDriver(onErrorDriveWith: Driver.empty())
                 .drive(onNext: { [weak self] isOn in
-                   // self?.selectedCellIndexPath[indexPath] = (isOn: isOn, cell: cell)
+                    self?.selectedCellIndexPath[indexPath] = (isOn: isOn, cell: cell)
                     self?.postCollection.performBatchUpdates({}, completion: {_ in })
                 })
                 .disposed(by: cell.disposeBag)
             
+            Driver.just(self.selectedCellIndexPath)
+                .drive(onNext: { info in
+                    let cellIsOn = info[indexPath]?.isOn
+                    cell.updateActive(isOn: cellIsOn ?? false)
+                })
+                .disposed(by: self.disposeBag)
+            
             return cell
         })
-
-        postCollection.rx.itemSelected
-            .subscribe(onNext:{ [weak self] indexPath in
-                
-              //  self?.postCollection.performBatchUpdates({}, completion: {_ in })
-            })
+        
+        postCollection.rx
+            .setDelegate(self)
             .disposed(by: disposeBag)
-//            
-//        postCollection.rx
-//            .setDelegate(self)
-//            .disposed(by: disposeBag)
         
         viewModel.posts
             .drive(self.postCollection.rx.items(dataSource: dataSource))
@@ -106,22 +103,22 @@ class BlogViewController: UIViewController {
         self.postCollection.collectionViewLayout.invalidateLayout()
     }
 }
-//
-//extension BlogViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-////        guard let indexPaths = self.selectedCellIndexPath[indexPath] else { return
-////            CGSize(width: 400, height: 550)
-////        }
-////        let isOn = indexPaths.isOn
-////        let cell = indexPaths.cell
-////
-////        if isOn {
-////            return cell.cellIntrinsicContentSize ?? CGSize(width: 100, height: 100)
-////        } else {
-//            return CGSize(width: 400, height: 550)
-//        // }
-//    }
-//}
+
+extension BlogViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        guard let indexPaths = self.selectedCellIndexPath[indexPath] else { return
+            CGSize(width: UIScreen.main.bounds.width-16, height: 550)
+        }
+        let isOn = indexPaths.isOn
+        let cell = indexPaths.cell
+
+        if isOn {
+            return cell.cellIntrinsicContentSize ?? CGSize(width: 100, height: 100)
+        } else {
+            return CGSize(width: 400, height: 550)
+        }
+    }
+}
 
 extension UIViewController {
     func addChildViewController(_ childViewController: UIViewController) {
